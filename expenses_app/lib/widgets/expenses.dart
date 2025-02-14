@@ -1,5 +1,6 @@
 import 'package:expenses_app/widgets/expenses_list/expenses_list.dart';
 import 'package:expenses_app/models/expense.dart';
+import 'package:expenses_app/widgets/new_expense.dart';
 import 'package:flutter/material.dart';
 
 class Expenses extends StatefulWidget {
@@ -35,10 +36,9 @@ class _ExpensesState extends State<Expenses> {
   void _openAddExpenseOverlay() {
     //
     showModalBottomSheet(
-        context: context,
-        builder: (ctx) {
-          return Text("Modal buttomsheet");
-        });
+      context: context,
+      builder: (ctx) => const NewExpense(),
+    );
   }
 
   @override
@@ -49,7 +49,7 @@ class _ExpensesState extends State<Expenses> {
         actions: [
           IconButton(
             onPressed: _openAddExpenseOverlay,
-            icon: Icon(Icons.add),
+            icon: const Icon(Icons.add),
           )
         ],
       ),
