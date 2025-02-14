@@ -16,7 +16,7 @@ class _ExpensesState extends State<Expenses> {
       title: 'Porn',
       amount: 20.00,
       date: DateTime.now(),
-      category: Category.work,
+      category: Category.leisure,
     ),
     Expense(
       title: 'Books',
@@ -28,12 +28,21 @@ class _ExpensesState extends State<Expenses> {
       title: 'Bill',
       amount: 200.00,
       date: DateTime.now(),
-      category: Category.leisure,
+      category: Category.other,
     ),
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Arial Track'),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.add),
+          )
+        ],
+      ),
       body: Column(
         children: [
           Text('Chart'),
