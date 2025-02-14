@@ -11,7 +11,7 @@ class ExpenseItem extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.symmetric(
           vertical: 16,
-          horizontal: 20,
+          horizontal: 10,
         ),
         child: Column(
           children: [
@@ -30,7 +30,7 @@ class ExpenseItem extends StatelessWidget {
                 Row(
                   children: [
                     const Icon(Icons.alarm),
-                    const SizedBox(width: 8),
+                    const SizedBox(width: 6),
                     Text(
                       expense.date.toString(),
                     ),
